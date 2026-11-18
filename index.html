@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DescarteCerto</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #02122b;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 60px 8%;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+
+                    rgba(2, 18, 43, 0.98) 0%,
+
+                    rgba(2, 18, 43, 0.96) 25%,
+
+                    rgba(2, 18, 43, 0.88) 43%,
+
+                    rgba(2, 18, 43, 0.68) 60%,
+
+                    rgba(2, 18, 43, 0.38) 78%,
+
+                    rgba(2, 18, 43, 0.15) 100%
+                ),
+
+                url("background-descarte.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+        }
+
+
+        /* =========================================
+           CONTEÚDO
+        ========================================= */
+
+        .conteudo {
+
+            max-width: 800px;
+
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            margin-bottom: 40px;
+        }
+
+
+        .logo h1 {
+
+            font-size: 4rem;
+
+            color: white;
+
+            font-weight: 700;
+
+            letter-spacing: -2px;
+        }
+
+
+        .logo span {
+
+            color: #63d471;
+        }
+
+
+        /* =========================================
+           TÍTULO
+        ========================================= */
+
+        .conteudo h2 {
+
+            font-size: 4.2rem;
+
+            line-height: 1.1;
+
+            color: white;
+
+            font-weight: 600;
+
+            margin-bottom: 22px;
+
+            letter-spacing: -1.5px;
+        }
+
+
+        .conteudo h2 strong {
+
+            color: #63d471;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           DESCRIÇÃO
+        ========================================= */
+
+        .descricao {
+
+            font-size: 1.25rem;
+
+            color: #e6e6e6;
+
+            max-width: 650px;
+
+            line-height: 1.8;
+
+            margin-bottom: 42px;
+        }
+
+
+        /* =========================================
+           CAMPO DE PESQUISA
+        ========================================= */
+
+        .pesquisa-container {
+
+            width: 100vw;
+
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 20px;
+
+            margin-left: -8vw;
+        }
+
+
+        .pesquisa {
+
+            width: min(650px, 90%);
+
+            display: flex;
+
+            align-items: center;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 8px 10px 8px 25px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.30);
+
+            transition: 0.3s ease;
+        }
+
+
+        .pesquisa:focus-within {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 20px 40px rgba(99, 212, 113, 0.25);
+        }
+
+
+        /* =========================================
+           ÍCONE
+        ========================================= */
+
+        .icone-pesquisa {
+
+            font-size: 1.35rem;
+
+            margin-right: 12px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        /* =========================================
+           INPUT
+        ========================================= */
+
+        .pesquisa input {
+
+            flex: 1;
+
+            min-width: 0;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            color: #26332d;
+
+            font-size: 1.05rem;
+        }
+
+
+        .pesquisa input::placeholder {
+
+            color: #7a8580;
+        }
+
+
+        /* =========================================
+           BOTÃO DE PESQUISA
+        ========================================= */
+
+        .pesquisa button {
+
+            width: 52px;
+
+            height: 52px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #63d471,
+                    #7ed957
+                );
+
+            color: #06152d;
+
+            font-size: 1.35rem;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: 0.3s ease;
+        }
+
+
+        .pesquisa button:hover {
+
+            transform: scale(1.05);
+
+            box-shadow:
+                0 8px 20px rgba(99, 212, 113, 0.30);
+        }
+
+
+        /* =========================================
+           SUGESTÕES
+        ========================================= */
+
+        .sugestoes {
+
+            width: min(650px, 90%);
+
+            margin: 18px auto 0;
+
+            text-align: center;
+
+            color: #d9d9d9;
+
+            font-size: 0.9rem;
+
+            line-height: 1.7;
+        }
+
+
+        .sugestoes span {
+
+            color: #63d471;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================================
+           RODAPÉ
+        ========================================= */
+
+        footer {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            color: #d9d9d9;
+
+            font-size: 0.95rem;
+
+            white-space: nowrap;
+
+            opacity: 0.9;
+        }
+
+
+        /* =========================================
+           RESPONSIVIDADE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .hero {
+
+                padding: 50px 7%;
+
+                background-position:
+                    center,
+                    65% center;
+            }
+
+
+            .logo {
+
+                gap: 12px;
+
+                margin-bottom: 30px;
+            }
+
+
+            .logo svg {
+
+                width: 65px;
+
+                height: 65px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 2.5rem;
+
+                letter-spacing: -1px;
+            }
+
+
+            .conteudo h2 {
+
+                font-size: 2.6rem;
+
+                letter-spacing: -0.8px;
+            }
+
+
+            .descricao {
+
+                font-size: 1rem;
+
+                line-height: 1.7;
+
+                margin-bottom: 35px;
+            }
+
+
+            .pesquisa-container {
+
+                width: 100%;
+
+                margin-left: 0;
+            }
+
+
+            .pesquisa {
+
+                width: 100%;
+
+                padding-left: 18px;
+            }
+
+
+            .pesquisa input {
+
+                font-size: 0.95rem;
+            }
+
+
+            .pesquisa button {
+
+                width: 46px;
+
+                height: 46px;
+
+                border-radius: 12px;
+            }
+
+
+            .sugestoes {
+
+                width: 100%;
+
+                font-size: 0.8rem;
+            }
+
+
+            footer {
+
+                position: relative;
+
+                left: auto;
+
+                bottom: auto;
+
+                transform: none;
+
+                text-align: center;
+
+                margin-top: 40px;
+
+                white-space: normal;
+            }
+
+        }
+
+
+        /* =========================================
+           CELULARES PEQUENOS
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .hero {
+
+                padding: 40px 6%;
+
+                background-position:
+                    center,
+                    68% center;
+            }
+
+
+            .logo svg {
+
+                width: 55px;
+
+                height: 55px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 2rem;
+            }
+
+
+            .conteudo h2 {
+
+                font-size: 2.2rem;
+            }
+
+
+            .descricao {
+
+                font-size: 0.95rem;
+            }
+
+
+            .pesquisa {
+
+                padding:
+                    7px
+                    8px
+                    7px
+                    16px;
+
+                border-radius: 15px;
+            }
+
+
+            .icone-pesquisa {
+
+                font-size: 1.1rem;
+
+                margin-right: 8px;
+            }
+
+
+            .pesquisa input {
+
+                font-size: 0.88rem;
+            }
+
+
+            .pesquisa button {
+
+                width: 43px;
+
+                height: 43px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+
+
+        <div class="conteudo">
+
+
+            <!-- =====================================
+                 LOGO
+            ====================================== -->
+
+            <div class="logo">
+
+
+                <svg
+                    width="95"
+                    height="95"
+                    viewBox="0 0 120 120"
+                    aria-label="Logo DescarteCerto"
+                >
+
+
+                    <!-- Folha superior -->
+
+                    <path
+                        d="M35 18 C15 18 8 38 22 50 C34 42 42 30 35 18"
+                        fill="#63d471"
+                    />
+
+
+                    <!-- Folha inferior -->
+
+                    <path
+                        d="M85 102 C105 102 112 82 98 70 C86 78 78 90 85 102"
+                        fill="#63d471"
+                    />
+
+
+                    <!-- Arco esquerdo -->
+
+                    <path
+                        d="M25 30 C5 55 10 90 40 105"
+                        fill="none"
+                        stroke="#63d471"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+
+                    <!-- Arco direito -->
+
+                    <path
+                        d="M95 90 C115 65 110 30 80 15"
+                        fill="none"
+                        stroke="#63d471"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+
+                    <!-- Estrutura central -->
+
+                    <rect
+                        x="45"
+                        y="28"
+                        width="24"
+                        height="48"
+                        rx="2"
+                        fill="white"
+                    />
+
+
+                    <rect
+                        x="70"
+                        y="42"
+                        width="14"
+                        height="34"
+                        rx="2"
+                        fill="white"
+                    />
+
+
+                    <!-- Janelas -->
+
+                    <rect
+                        x="50"
+                        y="35"
+                        width="4"
+                        height="4"
+                        fill="#0b2447"
+                    />
+
+                    <rect
+                        x="60"
+                        y="35"
+                        width="4"
+                        height="4"
+                        fill="#0b2447"
+                    />
+
+                    <rect
+                        x="50"
+                        y="45"
+                        width="4"
+                        height="4"
+                        fill="#0b2447"
+                    />
+
+                    <rect
+                        x="60"
+                        y="45"
+                        width="4"
+                        height="4"
+                        fill="#0b2447"
+                    />
+
+                    <rect
+                        x="50"
+                        y="55"
+                        width="4"
+                        height="4"
+                        fill="#0b2447"
+                    />
+
+                    <rect
+                        x="60"
+                        y="55"
+                        width="4"
+                        height="4"
+                        fill="#0b2447"
+                    />
+
+                </svg>
+
+
+                <!-- Nome -->
+
+                <h1>
+
+                    <span>Descarte</span>Certo
+
+                </h1>
+
+
+            </div>
+
+
+            <!-- =====================================
+                 TÍTULO PRINCIPAL
+            ====================================== -->
+
+            <h2>
+
+                Descarte inteligente para um
+                <strong>futuro mais sustentável</strong>
+
+            </h2>
+
+
+            <!-- =====================================
+                 DESCRIÇÃO
+            ====================================== -->
+
+            <p class="descricao">
+
+                Descubra como descartar seus resíduos corretamente
+                e encontre o destino adequado para cada material.
+
+            </p>
+
+
+            <!-- =====================================
+                 PESQUISA
+            ====================================== -->
+
+            <div class="pesquisa-container">
+
+
+                <form
+                    class="pesquisa"
+                    onsubmit="buscarResiduo(event)"
+                >
+
+
+                    <span class="icone-pesquisa">
+
+                        🔎
+
+                    </span>
+
+
+                    <input
+                        type="text"
+                        id="residuo"
+                        placeholder="O que você deseja descartar?"
+                        autocomplete="off"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        aria-label="Pesquisar"
+                    >
+
+                        →
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+            <!-- =====================================
+                 EXEMPLOS
+            ====================================== -->
+
+            <div class="sugestoes">
+
+                Exemplos:
+
+                <span>Pilhas</span> •
+
+                <span>Celular</span> •
+
+                <span>Lâmpadas</span> •
+
+                <span>Óleo</span> •
+
+                <span>Eletrônicos</span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+   
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        function buscarResiduo(event) {
+
+            event.preventDefault();
+
+            const campo =
+                document.getElementById("residuo");
+
+            const residuo =
+                campo.value.trim();
+
+
+            if (residuo === "") {
+
+                campo.focus();
+
+                return;
+
+            }
+
+
+            /*
+             * Salva o que foi pesquisado
+             * para a próxima tela.
+             */
+
+            localStorage.setItem(
+                "residuoPesquisado",
+                residuo
+            );
+
+
+            /*
+             * Vai para a tela de resultados.
+             */
+
+            window.location.href =
+                "resultado.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
