@@ -1,0 +1,1596 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resultado | DescarteCerto</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+            background: #02122b;
+
+            color: white;
+        }
+
+
+        /* =========================================
+           PÁGINA
+        ========================================= */
+
+        .pagina {
+
+            min-height: 100vh;
+
+            padding: 35px 8% 50px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+
+                    rgba(2, 18, 43, 0.99) 0%,
+
+                    rgba(2, 18, 43, 0.97) 25%,
+
+                    rgba(2, 18, 43, 0.92) 45%,
+
+                    rgba(2, 18, 43, 0.80) 65%,
+
+                    rgba(2, 18, 43, 0.55) 82%,
+
+                    rgba(2, 18, 43, 0.30) 100%
+                ),
+
+                url("background-descarte.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+        }
+
+
+        /* =========================================
+           CABEÇALHO
+        ========================================= */
+
+        .topo {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            text-decoration: none;
+
+            color: white;
+        }
+
+
+        .logo:hover,
+        .logo:visited,
+        .logo:active {
+
+            text-decoration: none;
+
+            color: white;
+        }
+
+
+        .logo svg {
+
+            width: 65px;
+
+            height: 65px;
+        }
+
+
+        .logo h1 {
+
+            font-size: 2.3rem;
+
+            color: white;
+
+            font-weight: 700;
+
+            letter-spacing: -1.5px;
+        }
+
+
+        .logo h1 span {
+
+            color: #63d471;
+        }
+
+
+        /* =========================================
+           VOLTAR
+        ========================================= */
+
+        .voltar {
+
+            color: #d9d9d9;
+
+            text-decoration: none;
+
+            font-size: 0.95rem;
+
+            transition: 0.3s ease;
+        }
+
+
+        .voltar:hover {
+
+            color: #63d471;
+
+            transform: translateX(-4px);
+        }
+
+
+        /* =========================================
+           CONTEÚDO
+        ========================================= */
+
+        .conteudo {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           TÍTULO
+        ========================================= */
+
+        .titulo {
+
+            margin-bottom: 25px;
+        }
+
+
+        .titulo small {
+
+            display: block;
+
+            color: #63d471;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .titulo h2 {
+
+            font-size: 3.2rem;
+
+            line-height: 1.15;
+
+            color: white;
+
+            font-weight: 600;
+
+            letter-spacing: -1px;
+        }
+
+
+        .titulo h2 span {
+
+            color: #63d471;
+        }
+
+
+        /* =========================================
+           CAMPO DE PESQUISA
+        ========================================= */
+
+        .pesquisa {
+
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 8px 10px 8px 25px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.30);
+
+            margin-bottom: 30px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .pesquisa:focus-within {
+
+            box-shadow:
+                0 20px 40px rgba(99, 212, 113, 0.20);
+
+            transform: translateY(-2px);
+        }
+
+
+        .icone-pesquisa {
+
+            font-size: 1.3rem;
+
+            margin-right: 12px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .pesquisa input {
+
+            flex: 1;
+
+            min-width: 0;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            color: #26332d;
+
+            font-size: 1.05rem;
+        }
+
+
+        .pesquisa input::placeholder {
+
+            color: #7a8580;
+        }
+
+
+        .pesquisa button {
+
+            width: 52px;
+
+            height: 52px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #63d471,
+                    #7ed957
+                );
+
+            color: #06152d;
+
+            font-size: 1.35rem;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: 0.3s ease;
+        }
+
+
+        .pesquisa button:hover {
+
+            transform: scale(1.05);
+
+            box-shadow:
+                0 8px 20px rgba(99, 212, 113, 0.30);
+        }
+
+
+        /* =========================================
+           GRID PRINCIPAL
+        ========================================= */
+
+        .grid {
+
+            display: grid;
+
+            grid-template-columns: 1.25fr 0.75fr;
+
+            gap: 22px;
+
+            align-items: stretch;
+        }
+
+
+        /* =========================================
+           CARD DE RESULTADO
+        ========================================= */
+
+        .resultado {
+
+            background: rgba(4, 25, 48, 0.82);
+
+            border: 1px solid rgba(255, 255, 255, 0.10);
+
+            border-radius: 24px;
+
+            padding: 32px;
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================================
+           CATEGORIA
+        ========================================= */
+
+        .categoria {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: rgba(99, 212, 113, 0.12);
+
+            border: 1px solid rgba(99, 212, 113, 0.25);
+
+            color: #63d471;
+
+            border-radius: 50px;
+
+            padding: 8px 14px;
+
+            font-size: 0.78rem;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           NOME DO RESÍDUO
+        ========================================= */
+
+        .resultado h3 {
+
+            font-size: 2.3rem;
+
+            color: white;
+
+            margin-bottom: 12px;
+
+            font-weight: 600;
+        }
+
+
+        .resultado > p {
+
+            color: #d4ddda;
+
+            line-height: 1.75;
+
+            font-size: 1rem;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           AVISO
+        ========================================= */
+
+        .alerta {
+
+            display: flex;
+
+            gap: 15px;
+
+            align-items: flex-start;
+
+            background: rgba(220, 180, 70, 0.10);
+
+            border: 1px solid rgba(220, 180, 70, 0.25);
+
+            border-radius: 15px;
+
+            padding: 18px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .alerta-icon {
+
+            font-size: 1.4rem;
+        }
+
+
+        .alerta strong {
+
+            display: block;
+
+            color: #f2d477;
+
+            margin-bottom: 4px;
+
+            font-size: 0.95rem;
+        }
+
+
+        .alerta p {
+
+            color: #d7d8d1;
+
+            font-size: 0.82rem;
+
+            line-height: 1.5;
+
+            margin: 0;
+        }
+
+
+        /* =========================================
+           AÇÕES
+        ========================================= */
+
+        .acoes {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .acao {
+
+            padding: 17px 14px;
+
+            border-radius: 15px;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            transition: 0.3s ease;
+        }
+
+
+        .acao:hover {
+
+            transform: translateY(-4px);
+
+            background: rgba(99, 212, 113, 0.08);
+
+            border-color: rgba(99, 212, 113, 0.25);
+        }
+
+
+        .acao-icon {
+
+            display: block;
+
+            font-size: 1.5rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .acao strong {
+
+            display: block;
+
+            color: white;
+
+            font-size: 0.85rem;
+
+            margin-bottom: 4px;
+        }
+
+
+        .acao p {
+
+            color: #aebbb6;
+
+            font-size: 0.72rem;
+
+            line-height: 1.4;
+
+            margin: 0;
+        }
+
+
+        /* =========================================
+           CARD DE PONTOS DE COLETA
+        ========================================= */
+
+        .coleta {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(99, 212, 113, 0.15),
+                    rgba(4, 25, 48, 0.90)
+                );
+
+            border: 1px solid rgba(99, 212, 113, 0.20);
+
+            border-radius: 24px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .coleta-icon {
+
+            width: 58px;
+
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: rgba(99, 212, 113, 0.14);
+
+            border-radius: 16px;
+
+            font-size: 1.7rem;
+
+            margin-bottom: 25px;
+        }
+
+
+        .coleta h3 {
+
+            font-size: 1.65rem;
+
+            line-height: 1.25;
+
+            color: white;
+
+            margin-bottom: 12px;
+        }
+
+
+        .coleta p {
+
+            color: #c5d0cb;
+
+            font-size: 0.9rem;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           BOTÃO
+        ========================================= */
+
+        .botao {
+
+            display: block;
+
+            width: 100%;
+
+            padding: 17px;
+
+            border-radius: 14px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #63d471,
+                    #7ed957
+                );
+
+            color: #06152d;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            text-align: center;
+
+            font-size: 0.95rem;
+
+            transition: 0.3s ease;
+        }
+
+
+        .botao:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 25px rgba(99, 212, 113, 0.25);
+        }
+
+
+        /* =========================================
+           RODAPÉ
+        ========================================= */
+
+        footer {
+
+            text-align: center;
+
+            color: #d9d9d9;
+
+            font-size: 0.85rem;
+
+            margin-top: 35px;
+
+            opacity: 0.85;
+        }
+
+
+        /* =========================================
+           RESPONSIVIDADE
+        ========================================= */
+
+        @media (max-width: 800px) {
+
+            .pagina {
+
+                padding: 25px 6% 45px;
+
+                background-position:
+                    center,
+                    65% center;
+            }
+
+
+            .topo {
+
+                margin-bottom: 35px;
+            }
+
+
+            .logo {
+
+                gap: 9px;
+            }
+
+
+            .logo svg {
+
+                width: 52px;
+
+                height: 52px;
+            }
+
+
+            .logo h1 {
+
+                font-size: 1.7rem;
+
+                letter-spacing: -1px;
+            }
+
+
+            .titulo h2 {
+
+                font-size: 2.3rem;
+            }
+
+
+            .grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .acoes {
+
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        /* =========================================
+           CELULARES PEQUENOS
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .pagina {
+
+                padding: 25px 5% 40px;
+            }
+
+
+            .voltar {
+
+                font-size: 0.8rem;
+            }
+
+
+            .titulo h2 {
+
+                font-size: 1.9rem;
+            }
+
+
+            .resultado {
+
+                padding: 23px;
+            }
+
+
+            .resultado h3 {
+
+                font-size: 1.9rem;
+            }
+
+
+            .coleta {
+
+                padding: 23px;
+            }
+
+
+            .acoes {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .pesquisa {
+
+                padding:
+                    7px
+                    8px
+                    7px
+                    16px;
+
+                border-radius: 15px;
+            }
+
+
+            .icone-pesquisa {
+
+                font-size: 1.1rem;
+
+                margin-right: 8px;
+            }
+
+
+            .pesquisa input {
+
+                font-size: 0.88rem;
+            }
+
+
+            .pesquisa button {
+
+                width: 43px;
+
+                height: 43px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<section class="pagina">
+
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="topo">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+
+            <svg
+                viewBox="0 0 120 120"
+                aria-label="Logo DescarteCerto"
+            >
+
+
+                <!-- Folha superior -->
+
+                <path
+                    d="M35 18 C15 18 8 38 22 50 C34 42 42 30 35 18"
+                    fill="#63d471"
+                />
+
+
+                <!-- Folha inferior -->
+
+                <path
+                    d="M85 102 C105 102 112 82 98 70 C86 78 78 90 85 102"
+                    fill="#63d471"
+                />
+
+
+                <!-- Arco esquerdo -->
+
+                <path
+                    d="M25 30 C5 55 10 90 40 105"
+                    fill="none"
+                    stroke="#63d471"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                />
+
+
+                <!-- Arco direito -->
+
+                <path
+                    d="M95 90 C115 65 110 30 80 15"
+                    fill="none"
+                    stroke="#63d471"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                />
+
+
+                <!-- Estrutura central -->
+
+                <rect
+                    x="45"
+                    y="28"
+                    width="24"
+                    height="48"
+                    rx="2"
+                    fill="white"
+                />
+
+
+                <rect
+                    x="70"
+                    y="42"
+                    width="14"
+                    height="34"
+                    rx="2"
+                    fill="white"
+                />
+
+
+                <!-- Janelas -->
+
+                <rect
+                    x="50"
+                    y="35"
+                    width="4"
+                    height="4"
+                    fill="#0b2447"
+                />
+
+                <rect
+                    x="60"
+                    y="35"
+                    width="4"
+                    height="4"
+                    fill="#0b2447"
+                />
+
+                <rect
+                    x="50"
+                    y="45"
+                    width="4"
+                    height="4"
+                    fill="#0b2447"
+                />
+
+                <rect
+                    x="60"
+                    y="45"
+                    width="4"
+                    height="4"
+                    fill="#0b2447"
+                />
+
+                <rect
+                    x="50"
+                    y="55"
+                    width="4"
+                    height="4"
+                    fill="#0b2447"
+                />
+
+                <rect
+                    x="60"
+                    y="55"
+                    width="4"
+                    height="4"
+                    fill="#0b2447"
+                />
+
+            </svg>
+
+
+            <h1>
+
+                <span>Descarte</span>Certo
+
+            </h1>
+
+
+        </a>
+
+
+        <!-- VOLTAR -->
+
+        <a
+            href="index.html"
+            class="voltar"
+        >
+
+            ← Voltar
+
+        </a>
+
+
+    </header>
+
+
+    <!-- =========================================
+         CONTEÚDO
+    ========================================== -->
+
+    <main class="conteudo">
+
+
+        <!-- TÍTULO -->
+
+        <div class="titulo">
+
+
+            <small>
+
+                Resultado da pesquisa
+
+            </small>
+
+
+            <h2>
+
+                Veja como descartar
+                <span>corretamente.</span>
+
+            </h2>
+
+
+        </div>
+
+
+        <!-- =====================================
+             NOVA PESQUISA
+        ====================================== -->
+
+        <form
+            class="pesquisa"
+            onsubmit="novaBusca(event)"
+        >
+
+
+            <span class="icone-pesquisa">
+
+                🔎
+
+            </span>
+
+
+            <input
+                type="text"
+                id="campoBusca"
+                placeholder="O que você deseja descartar?"
+                autocomplete="off"
+                required
+            >
+
+
+            <button
+                type="submit"
+                aria-label="Pesquisar novamente"
+            >
+
+                →
+
+            </button>
+
+
+        </form>
+
+
+        <!-- =====================================
+             RESULTADOS
+        ====================================== -->
+
+        <div class="grid">
+
+
+            <!-- =================================
+                 CARD PRINCIPAL
+            ================================== -->
+
+            <section class="resultado">
+
+
+                <div class="categoria">
+
+                    ♻️ <span id="categoria">ELETRÔNICO</span>
+
+                </div>
+
+
+                <h3 id="nomeResiduo">
+
+                    Celular
+
+                </h3>
+
+
+                <p id="descricaoResiduo">
+
+                    Celulares não devem ser descartados
+                    no lixo comum. Seus componentes podem
+                    ser reaproveitados e alguns materiais
+                    precisam de destinação adequada.
+
+                </p>
+
+
+                <!-- AVISO -->
+
+                <div class="alerta">
+
+
+                    <div class="alerta-icon">
+
+                        ⚠️
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+
+                            Não descarte no lixo comum
+
+                        </strong>
+
+
+                        <p>
+
+                            Procure um ponto de coleta de
+                            resíduos eletrônicos ou uma
+                            alternativa de reutilização.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- AÇÕES -->
+
+                <div class="acoes">
+
+
+                    <div class="acao">
+
+                        <span class="acao-icon">
+
+                            ♻️
+
+                        </span>
+
+
+                        <strong>
+
+                            Reciclar
+
+                        </strong>
+
+
+                        <p>
+
+                            Encaminhe para um ponto
+                            especializado.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="acao">
+
+                        <span class="acao-icon">
+
+                            🔧
+
+                        </span>
+
+
+                        <strong>
+
+                            Reutilizar
+
+                        </strong>
+
+
+                        <p>
+
+                            Dê uma nova utilidade ao aparelho.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="acao">
+
+                        <span class="acao-icon">
+
+                            🎁
+
+                        </span>
+
+
+                        <strong>
+
+                            Doar
+
+                        </strong>
+
+
+                        <p>
+
+                            Se estiver funcionando,
+                            considere a doação.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================
+                 CARD DE COLETA
+            ================================== -->
+
+            <aside class="coleta">
+
+
+                <div>
+
+
+                    <div class="coleta-icon">
+
+                        📍
+
+                    </div>
+
+
+                    <h3>
+
+                        Onde posso levar?
+
+                    </h3>
+
+
+                    <p>
+
+                        Encontre pontos de coleta próximos
+                        que recebem esse tipo de material.
+
+                    </p>
+
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="botao"
+                    onclick="abrirPontos(event)"
+                >
+
+                    Encontrar pontos de coleta
+
+                </a>
+
+
+            </aside>
+
+
+        </div>
+
+
+    </main>
+
+
+
+</section>
+
+
+<script>
+
+    /* =========================================
+       BANCO SIMPLES DO PROTÓTIPO
+    ========================================= */
+
+    const residuos = {
+
+        celular: {
+
+            categoria: "ELETRÔNICO",
+
+            nome: "Celular",
+
+            descricao:
+                "Celulares não devem ser descartados no lixo comum. Seus componentes podem ser reaproveitados e alguns materiais precisam de destinação adequada."
+
+        },
+
+        pilha: {
+
+            categoria: "RESÍDUO PERIGOSO",
+
+            nome: "Pilha",
+
+            descricao:
+                "Pilhas possuem componentes que podem contaminar o solo e a água quando descartadas incorretamente. O ideal é encaminhá-las para pontos de coleta específicos."
+
+        },
+
+        pilhas: {
+
+            categoria: "RESÍDUO PERIGOSO",
+
+            nome: "Pilhas",
+
+            descricao:
+                "Pilhas possuem componentes que podem contaminar o solo e a água quando descartadas incorretamente. O ideal é encaminhá-las para pontos de coleta específicos."
+
+        },
+
+        lampada: {
+
+            categoria: "RESÍDUO ESPECIAL",
+
+            nome: "Lâmpada",
+
+            descricao:
+                "Lâmpadas devem receber uma destinação adequada, especialmente os modelos que possuem componentes que podem oferecer riscos ao meio ambiente."
+
+        },
+
+        lâmpada: {
+
+            categoria: "RESÍDUO ESPECIAL",
+
+            nome: "Lâmpada",
+
+            descricao:
+                "Lâmpadas devem receber uma destinação adequada, especialmente os modelos que possuem componentes que podem oferecer riscos ao meio ambiente."
+
+        },
+
+        oleo: {
+
+            categoria: "ÓLEO DE COZINHA",
+
+            nome: "Óleo de cozinha",
+
+            descricao:
+                "O óleo de cozinha não deve ser despejado na pia ou no vaso sanitário. Armazene o óleo usado em um recipiente fechado e procure um ponto de coleta."
+
+        },
+
+        óleo: {
+
+            categoria: "ÓLEO DE COZINHA",
+
+            nome: "Óleo de cozinha",
+
+            descricao:
+                "O óleo de cozinha não deve ser despejado na pia ou no vaso sanitário. Armazene o óleo usado em um recipiente fechado e procure um ponto de coleta."
+
+        },
+
+        eletronico: {
+
+            categoria: "ELETRÔNICO",
+
+            nome: "Eletrônico",
+
+            descricao:
+                "Equipamentos eletrônicos possuem materiais que podem ser reaproveitados. Procure um ponto de coleta especializado em resíduos eletrônicos."
+
+        },
+
+        eletrônicos: {
+
+            categoria: "ELETRÔNICO",
+
+            nome: "Eletrônicos",
+
+            descricao:
+                "Equipamentos eletrônicos possuem materiais que podem ser reaproveitados. Procure um ponto de coleta especializado em resíduos eletrônicos."
+
+        }
+
+    };
+
+
+    /* =========================================
+       NORMALIZAR TEXTO
+    ========================================= */
+
+    function normalizarTexto(texto) {
+
+        return texto
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
+
+    }
+
+
+    /* =========================================
+       CARREGAR PESQUISA
+    ========================================= */
+
+    const pesquisaSalva =
+        localStorage.getItem("residuoPesquisado");
+
+
+    if (pesquisaSalva) {
+
+        mostrarResultado(pesquisaSalva);
+
+    }
+
+
+    /* =========================================
+       MOSTRAR RESULTADO
+    ========================================= */
+
+    function mostrarResultado(residuoPesquisado) {
+
+        const termo =
+            normalizarTexto(residuoPesquisado);
+
+
+        const resultado =
+            residuos[termo];
+
+
+        document.getElementById(
+            "campoBusca"
+        ).value = residuoPesquisado;
+
+
+        /*
+         * Se o resíduo estiver cadastrado
+         */
+
+        if (resultado) {
+
+            document.getElementById(
+                "categoria"
+            ).textContent =
+                resultado.categoria;
+
+
+            document.getElementById(
+                "nomeResiduo"
+            ).textContent =
+                resultado.nome;
+
+
+            document.getElementById(
+                "descricaoResiduo"
+            ).textContent =
+                resultado.descricao;
+
+        }
+
+
+        /*
+         * Se o resíduo ainda não estiver
+         * cadastrado no protótipo.
+         */
+
+        else {
+
+            document.getElementById(
+                "categoria"
+            ).textContent =
+                "RESÍDUO";
+
+
+            document.getElementById(
+                "nomeResiduo"
+            ).textContent =
+                residuoPesquisado;
+
+
+            document.getElementById(
+                "descricaoResiduo"
+            ).textContent =
+                "Ainda estamos ampliando nossa base de informações para este material. Consulte as orientações de descarte da sua cidade e procure um ponto de coleta adequado.";
+
+        }
+
+    }
+
+
+    /* =========================================
+       NOVA BUSCA
+    ========================================= */
+
+    function novaBusca(event) {
+
+        event.preventDefault();
+
+
+        const campo =
+            document.getElementById("campoBusca");
+
+
+        const novoResiduo =
+            campo.value.trim();
+
+
+        if (novoResiduo === "") {
+
+            campo.focus();
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "residuoPesquisado",
+            novoResiduo
+        );
+
+
+        mostrarResultado(novoResiduo);
+
+    }
+
+
+    /* =========================================
+       BOTÃO DE PONTOS DE COLETA
+    ========================================= */
+
+    function abrirPontos(event) {
+
+        event.preventDefault();
+
+
+        alert(
+            "A próxima tela do protótipo será o mapa com pontos de coleta próximos."
+        );
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
+
