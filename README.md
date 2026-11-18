@@ -27,56 +27,6 @@ A aplicação reúne orientações sobre a destinação de diferentes materiais 
 | OpenStreetMap | Dados cartográficos |
 | LocalStorage | Armazenamento de informações durante a navegação |
 
-## Estrutura do projeto
-
-```text
-DescarteCerto/
-│
-├── index.html
-├── resultado.html
-├── mapa.html
-├── detalhes.html
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-├── css/
-│   ├── style.css
-│   ├── resultado.css
-│   ├── mapa.css
-│   └── detalhes.css
-│
-├── js/
-│   ├── script.js
-│   ├── resultado.js
-│   ├── mapa.js
-│   └── detalhes.js
-│
-├── README.md
-└── .gitignore
-```
-
-## Como executar o projeto
-
-1. Clone este repositório:
-
-   ```bash
-   git clone URL_DO_REPOSITORIO
-   ```
-
-2. Acesse a pasta do projeto:
-
-   ```bash
-   cd DescarteCerto
-   ```
-
-3. Abra a pasta no Visual Studio Code.
-
-4. Execute o arquivo `index.html` utilizando a extensão **Live Server**.
-
-5. Navegue pelas funcionalidades da aplicação.
-
 ## Objetivo acadêmico
 
 O projeto busca aplicar conhecimentos de Engenharia de Software e desenvolvimento web na criação de uma solução digital voltada à sustentabilidade.
