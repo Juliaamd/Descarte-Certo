@@ -1,10 +1,10 @@
-# DescarteCerto
+# ♻️ Descarte Certo
 
 **Aplicação web para consulta de orientações de descarte de resíduos e localização de pontos de coleta em Goiânia – GO.**
 
 ## Sobre o projeto
 
-O **DescarteCerto** é um projeto acadêmico desenvolvido com o propósito de facilitar o acesso a informações sobre o descarte adequado de resíduos.
+O **Descarte Certo** é um projeto acadêmico desenvolvido com o propósito de facilitar o acesso a informações sobre o descarte adequado de resíduos.
 
 A aplicação reúne orientações sobre a destinação de diferentes materiais e permite consultar pontos de coleta, contribuindo para a conscientização ambiental e o incentivo a práticas mais sustentáveis.
 
@@ -35,11 +35,11 @@ Por meio da aplicação, são trabalhados conceitos de estruturação de página
 
 ## Observação
 
-O DescarteCerto possui finalidade acadêmica e não representa um serviço oficial da Prefeitura de Goiânia. As informações sobre endereços, horários e materiais aceitos nos pontos de coleta devem ser confirmadas junto aos responsáveis pelos locais.
+O Descarte Certo possui finalidade acadêmica e não representa um serviço oficial da Prefeitura de Goiânia. As informações sobre endereços, horários e materiais aceitos nos pontos de coleta devem ser confirmadas junto aos responsáveis pelos locais.
 
 ---
 
-**DescarteCerto** — Informação e tecnologia a favor do descarte consciente.
-DescarteCerto — Informação para descartar melhor e cuidar do meio ambiente.
+**Descarte Certo** — Informação e tecnologia a favor do descarte consciente.
+Descarte Certo — Informação para descartar melhor e cuidar do meio ambiente.
 
 Projeto acadêmico demonstrativo. As informações e funcionalidades estão sujeitas à validação e atualização.
